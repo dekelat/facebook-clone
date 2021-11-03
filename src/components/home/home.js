@@ -99,10 +99,11 @@ export default function Home() {
             <header>
                 <h1>Facebook</h1>
             </header>
-            <form onSubmit={onRegister}>
+            
+            {/* <form onSubmit={onRegister}>
                 <input type="text" onChange={(event) => setName(event.target.value)} disabled={isDisabled}/>
                 <button type="submit" disabled={isDisabled}>Register</button>
-            </form>
+            </form> */}
             
             <PostInput />
             {allPosts.map((post, index) => <Post key={index} post={post} />)}
