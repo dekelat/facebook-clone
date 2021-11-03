@@ -16,7 +16,7 @@ export default function Home() {
         <div className="home">
             <header>Facebook</header>
             <PostInput />
-            {allPost.map(post => <Post />)}
+            {allPost.map((post, index) => <Post key={index} />)}
         </div>
     );
 }
