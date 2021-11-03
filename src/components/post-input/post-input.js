@@ -2,18 +2,28 @@ import React, { useState } from 'react';
 import './post-input.scss';
 
 export default function PostInput() {
-     const [post, setPost] = useState("");
+     const [message, setMessage] = useState("");
 
-    const onSubmit = (event) => {
+    const onSubmit = async (event) => {
         event.preventDefault();
-        console.log(post);
-        setPost("");
+
+        try{
+            const url="http://netcraft-hackathon.herokuapp.com/post";
+            const requestOptions= {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({message})
+            }
+            fetch(url, requestOptions).then(response => console.log(response))
+        } catch (error) {
+            console.log("error", error);
+        }
     };
 
     return (
-        <div class="post-input">
+        <div className="post-input">
             <form onSubmit={onSubmit}>
-               <input type="text" onChange={(event) => setPost(event.target.value)}/>
+               <input type="text" onChange={(event) => setMessage(event.target.value)}/>
                <button type="submit">post</button> 
             </form>
         </div>
