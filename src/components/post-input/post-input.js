@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import './post-input.scss';
 
 export default function PostInput() {
-    const [post, setPost] = useState("");
+     const [post, setPost] = useState("");
 
     const onSubmit = (event) => {
         event.preventDefault();
@@ -10,7 +11,7 @@ export default function PostInput() {
     };
 
     return (
-        <div>
+        <div class="post-input">
             <form onSubmit={onSubmit}>
                <input type="text" onChange={(event) => setPost(event.target.value)}/>
                <button type="submit">post</button> 
