@@ -12,7 +12,7 @@ export default function PostInput() {
             const requestOptions= {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({message})
+                body: JSON.stringify({name: "shimon", message})
             }
             fetch(url, requestOptions).then(response => console.log(response))
         } catch (error) {
