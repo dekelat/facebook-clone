@@ -1,4 +1,5 @@
 import './post.scss';
+import React, { useState } from 'react';
 
 export default function Post({ post }) {
     const [comment, setComment] = useState("");
@@ -54,6 +55,11 @@ export default function Post({ post }) {
 
             <input type="text" placeholder="Write a comment here.." onChange={(event) => setComment(event.target.value)}></input>
             <button type="button" onClick={onComment}>Send</button>
+
+            <ul className="comments">
+                {post.comments.map((x, index) => 
+                    <li key={index}>{x.message}</li>)}
+            </ul>
         </div>
     );
 }

@@ -20,4 +20,12 @@
             color: rgb(209, 0, 0);
         }
     }
+
+    .comments {
+        padding: 0;
+
+        li {
+            list-style: none;
+        } 
+    }
 }
