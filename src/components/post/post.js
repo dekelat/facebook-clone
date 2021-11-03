@@ -18,13 +18,14 @@ export default function Post({ post }) {
             </h2>
 
             <div className="likes">
-            <span>
-                {post.likes.length} likes
-            </span>
+                <span>
+                    {post.likes.length} likes
+                </span>
                 <button type="button">❤</button>
             </div>
 
-            <input type="text" placeholder="comment here"></input>
+            <input type="text" placeholder="Write a comment here.."></input>
+            <button type="button">Send</button>
         </div>
     );
 }

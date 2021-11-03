@@ -23,8 +23,8 @@ export default function PostInput() {
     return (
         <div className="post-input">
             <form onSubmit={onSubmit}>
-               <input type="text" onChange={(event) => setMessage(event.target.value)}/>
-               <button type="submit">post</button> 
+                <input type="text" onChange={(event) => setMessage(event.target.value)} placeholder="What's on your mind? 🤔"/>
+               <button type="submit">Post</button> 
             </form>
         </div>
     )
