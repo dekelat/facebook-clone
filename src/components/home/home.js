@@ -1,12 +1,22 @@
 import PostInput from "../post-input/post-input";
 import Post from "../post/post";
+import './home.scss';
 
 export default function Home() {
+
+
+    const allPost: [] = [
+        {
+        },
+        {
+        },
+    ];
+
     return (
-        <div>
+        <div className="home">
             <header>Facebook</header>
-            <PostInput/>
-            <Post/>
+            <PostInput />
+            {allPost.map(post => <Post />)}
         </div>
-    )
+    );
 }
