@@ -18,6 +18,10 @@
             background-color: transparent;
             font-size: 26px;
             color: rgb(209, 0, 0);
+            transition: all .3s;
+            &:hover {
+                color: rgb(255, 4, 4);
+            }
         }
     }
 
